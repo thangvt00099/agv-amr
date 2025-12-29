@@ -126,8 +126,8 @@
         </gazebo>
     </xacro:macro>
 
-    <xacro:wheel prefix="drive_left" x_reflect="-1" y_reflect="1" />
-    <xacro:wheel prefix="drive_right" x_reflect="-1" y_reflect="-1" />  
+    <xacro:wheel prefix="left_wheel" x_reflect="-1" y_reflect="1" />
+    <xacro:wheel prefix="right_wheel" x_reflect="-1" y_reflect="-1" />  
 
     <!-- Caster Wheel -->
     <link name="front_caster">

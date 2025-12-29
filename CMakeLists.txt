@@ -24,7 +24,7 @@ if(BUILD_TESTING)
 endif()
 
 install(
-  DIRECTORY src urdf launch worlds
+  DIRECTORY src urdf launch config worlds
   DESTINATION share/${PROJECT_NAME}
 )
 
