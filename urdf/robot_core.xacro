@@ -120,17 +120,21 @@
         </joint>
 
         <gazebo reference="${prefix}_link">
+            <mu1>0.1</mu1>
+            <mu2>0.1</mu2>
             <material>
                 Gazebo/Black
             </material>
         </gazebo>
     </xacro:macro>
 
-    <xacro:wheel prefix="left_wheel" x_reflect="-1" y_reflect="1" />
-    <xacro:wheel prefix="right_wheel" x_reflect="-1" y_reflect="-1" />  
+    <xacro:wheel prefix="front_left" x_reflect="1" y_reflect="1" />
+    <xacro:wheel prefix="front_right" x_reflect="1" y_reflect="-1" />
+    <xacro:wheel prefix="back_left" x_reflect="-1" y_reflect="1" />
+    <xacro:wheel prefix="back_right" x_reflect="-1" y_reflect="-1" />  
 
     <!-- Caster Wheel -->
-    <link name="front_caster">
+    <!-- <link name="front_caster">
         <visual>
             <geometry>
                 <sphere radius="${(wheel_radius+wheel_zoff-(base_height/2))}"/>
@@ -159,5 +163,5 @@
         </material>
         <mu1>0.001</mu1>
         <mu2>0.001</mu2>
-    </gazebo>
+    </gazebo> -->
 </robot>
