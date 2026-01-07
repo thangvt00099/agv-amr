@@ -60,10 +60,25 @@ def generate_launch_description():
         parameters=[{'use_sim_time': True}]
     )
 
+    map_node = Node(
+        package='nav2_map_server',
+        executable='map_server',
+        name='map_server',
+        output='screen',
+        parameters=[{'yaml_file': '/home/thang/ros2_workspace/src/robot_description/maps/map.yaml'}]
+    )
+
+    # nav2_node = Node(
+    #     package="nav2_bringup",
+    #     executable="bringup.launch.py",
+    #     parameters=[os.path.join(pkg_share, 'config', 'nav2_params.yaml')]
+    # )
+
     return LaunchDescription([
         gazebo,
         robot_state_publisher_node,
-        # joint_state_publisher_node,
+        joint_state_publisher_node,
         spawn_entity_node,
         rviz_node,
+        # nav2_node,
     ])
