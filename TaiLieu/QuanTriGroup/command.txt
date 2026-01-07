@@ -1,0 +1,13 @@
+/etc/group: 
+	- tap tin van ban chua thong tin ve nhom user tren may.
+	- chi root moi co quyen thay doi.
+	|group_name|password|group_id|additional_member
+
+Tao nhom: groupadd [Options] group_name
+	-g: Dinh nghia nhom voi ma nhom GID
+
+Sua thong tin nhom: groupdmod [Options] group_name
+	-g GID: sua ma nhom thanh GID
+	-n group_name: sua ten nhom thanh group_name
+
+Xoa nhom: groupdel group_name (Xoa user truoc neu ton tai user trong group can xoa)

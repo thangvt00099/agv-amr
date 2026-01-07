@@ -1,0 +1,32 @@
+Vao root: sudo su -
+
+Kiem tra trang thai ssh: systemctl status ssh
+
+Cho phep vao root bang mat khau: sudo nano /etc/ssh/sshd_config
+	- Chinh: PermitRootLogin yes
+	- Chinh: PasswordAuthentication yes
+	sudo systemctl restart ssh
+
+Sao luu va dong bo du lieu tu cac may chu: rsync [Options] source destination
+	-v (--verbose): hien thong tin chi tiet trong qua trinh thuc thi
+	-r: sao chep du lieu theo cach de quy (khong bao ton moc thoi gian
+	va permission trong qua trinh truyen du lieu)
+	-a: che do luu tru cho phep sao chep cac tep de quy va giu lien ket,
+	quyen so huu, nhom va moc thoi gian
+	-z: nen du lieu
+	-h: dinh dang so
+	-u (update): ghi de file dich neu file nguon moi hon. Tranh ghi de file
+	da duoc cap nhat
+
+So sanh SCP va RSYNC:
+1.SCP
+	- Sao chep toan bo file: ko check su khac biet
+	- Khong ho tro resume: bi gian doan phai truyen lai tu dau
+	- De dung, it options: don gian, nhanh gon
+2.RSYNC
+	- Chi sao chep phan thay doi: tiet kiem bang thong
+	- Ho tro resume: bi gian doan, co the chay lai
+	- Options linh hoat: dong bo 1 hoac 2 chieu, xoa file o dich, nen du lieu khi truyen
+	(-z), hien thi tien trinh (--progress)
+
+Test dry-run option

@@ -1,0 +1,12 @@
+SCP (secure copy - copy an toan): scp [Options] [[user@]host1:]...
+	- Ghi de file neu file co cung ten da ton tai
+5 Options:
+	-P: port (chi dinh vi tri cong SSH ket noi tren may chu remote khac voi cong
+	mac dinh 22)
+	-q: bao mat thong tin thoi gian cua tien trinh truyen du lieu
+	-r: copy toan bo thu muc va noi dung ben trong
+	-S: ten chuong trinh su dung cho ket noi duoc ma hoa, chuong trinh
+	phai dam bao cac tuy chon su dung
+	-i: chi dinh file khoa rieng de nhan dien
+	-l: gioi han bang thong trong viec truyen du lieu
+	-o: chi dinh cac tuy chon bo sung cho SSH

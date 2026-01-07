@@ -1,0 +1,34 @@
+/etc/passwd: 
+	- xem infor cac tai khoan user tren may
+	- root moi co quyen thay doi
+
+/etc/shadow:
+	- chua infor ve mat khau cac tai khoan user tren may
+	- root moi co quyen reset mat khau cua bat ky user nao tren may
+
+Tao tai khoan user: useadd [Options] login_name
+	-c: comment - alias
+	-u: set userID
+	-d: chi dinh thu muc home
+	-g: chi dinh nhom chinh
+	-G: chi dinh nhom phu (nhom mo rong)
+	-s: chi dinh shell cho user su dung
+
+Sua thong tin tai khoan: usermod [Options] login_name
+	-c: comment - alias
+	-l -d: thay doi thu muc home
+	-g: chi dinh nhom
+	-G: chi dinh nhom phu
+	-s: chi dinh shell cho user su dung
+	-L: lock account
+
+Xoa tai khoan User: userdel [Options] login_name
+	-r: xoa thu muc home cua user
+
+Thiet lap chinh sach cho user: chage [Options] login_name
+	-l: xem chinh sach cua 1 user
+	-E: thiet lap ngay het han cho account
+	-I: thiet lap so ngay bi khoa sau khi het han mat khau
+	-m: thiet lap so ngay toi thieu duoc phep thay doi password
+	-M: thiet lap so ngay toi da duoc phep thay doi password
+	-W: thiet lap so ngay canh bao truoc khi het han mat khau

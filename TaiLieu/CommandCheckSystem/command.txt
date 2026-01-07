@@ -1,0 +1,11 @@
+Xem RAM: cat /proc/memoinfo
+Xem CPU: cat /proc/cpuinfo
+Xem kernel linux: uname -r
+Xem dung luong o cung: df -h
+Xem thong tin model, serial,... phan cung: dmidecode -t [Options]
+Xem cac tien trinh: top
+Xem dung luong thu muc: du [Options]
+	-s: xuat ket qua theo summarize (tong dung luong)
+	-h: in kich thuoc ma nguoi dung co the doc
+Xem dia chi ip: ifconfig
+Xem ten server: hostname
